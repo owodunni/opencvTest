@@ -1,0 +1,16 @@
+* opencv, download via github, follow instructions with cmake on 
+opencv's homepage.
+
+* add the following to your bash_rc
+ export $LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib 
+ export $PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+
+* Controll that both `pkg-config --cflags opencv` and pkg-config --libs opencv`
+give output, (2 in the first case and multiple in the second) Beware 
+of the backticks. (shift- tick)
+
+*run make test application by running ./bin/openCVTest lena.jpg
+
+
+
+
