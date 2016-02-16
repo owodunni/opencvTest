@@ -1,7 +1,7 @@
 * opencv, download via github, follow instructions with cmake on 
 opencv's homepage.
 
-* add the following to your bash_rc
+* add the following to your .bashrc file
  export $LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib 
  export $PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 
@@ -9,7 +9,7 @@ opencv's homepage.
 give output, (2 in the first case and multiple in the second) Beware 
 of the backticks. (shift- tick)
 
-*run make test application by running ./bin/openCVTest lena.jpg
+*run make test application by running ./bin/openCVTest len_std.jpg
 
 
 
