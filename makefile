@@ -24,18 +24,16 @@ CCFLAGS = -Wall -std=c++11
 ##### Compiling starts #####
 all : $(EXEC)
 
-$(EXEC) : $(OBJS) mkdirs
+$(EXEC) : $(OBJS) makefile
+	mkdir -p bin
 	g++ $(CCFLAGS) -o bin/$@ $(OBJS) $(INCLUDES) $(LDFLAGS) $(OPENCV_LD)
 
 obj/%.o : $(SRC_FOLDER)/%.cpp $(SRC_FOLDER)/%.h
 	g++ $(CCFLAGS) -c -o $@ $< $(INCLUDES)
 
-obj/%.o : $(SRC_FOLDER)/%.cpp 
+obj/%.o : $(SRC_FOLDER)/%.cpp
+	mkdir -p obj
 	g++ $(CCFLAGS) -c -o $@ $< $(INCLUDES)
-
-mkdirs: 
-	@echo " Making directories..."
-	mkdir -p bin obj
 
 clean: 
 	@echo " Cleaning..."
